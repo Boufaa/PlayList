@@ -133,6 +133,13 @@ class Stack{
         if (this.size == 1){
             popButton.disabled = true;
             result.innerHTML = "Stack is empty";
+            singer.innerHTML = "";
+            title.innerHTML = "";
+            this.stack.splice(this.top);
+            this.singer.splice(this.top);
+            this.title.splice(this.top);
+            this.top--;
+            this.size--;
         }else{
             // delete this.stack[this.size];
             this.stack.splice(this.top);
